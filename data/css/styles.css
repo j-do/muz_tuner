@@ -1,0 +1,14 @@
+/* 
+    Created on : May 28, 2014, 1:05:40 PM
+    Author     : Jason "J-Do" Hittle 
+*/
+body{
+    background-color: black;
+    color: white;
+}
+
+.container{
+    font-family: sans-serif;
+    padding: 5px;
+}
+

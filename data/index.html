@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MuZishuss Tuner</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/styles.css" rel="stylesheet">
+        <script src="js/libs/jquery/jquery.js"></script>
+        <script src="js/libs/angular.js/angular.js"></script>       
+        <script src="js/muz_tuner.js"></script>
+    </head>
+    <body>
+        <div ng-app="muzTuner">
+            <div class="container" ng-controller="TunerController">
+                <button ng-click="start">start</button>
+                <svg>
+                <text x="0.0" y="15.0" fill="white" stroke="white" stroke-width="1" font-size="20">&#9837;</text>
+                <polygon transform="translate({{indicatorXPos}},0.0)" points="0,0 20,10 0,20" fill="{{flat}}" stroke-width="0"/>
+                <circle transform="translate({{indicatorXPos}},0.0)" cx="35.0" cy="10.0" r="10" fill="{{perfect}}" stroke-width="0"/>
+                <polygon transform="translate({{indicatorXPos}},0.0)" points="70,0 50,10 70,20" fill="{{sharp}}" stroke-width="0"/>
+                <text transform="translate({{indicatorXPos}},0.0)" x="72.0" y="15.0" fill="white" stroke="white" stroke-width="1" font-size="20">&#9839;</text>
+                <text transform="translate({{indicatorXPos}},0.0)" x="92.0" y="20.0" fill="{{notes.fill.A}}" stroke="{{notes.stroke.A}}" stroke-width="1" font-size="25">A</text>
+                <text transform="translate({{indicatorXPos}},0.0)" x="112.0" y="20.0" fill="{{notes.fill.B}}" stroke="{{notes.stroke.B}}" stroke-width="1" font-size="25">B</text>
+                <text transform="translate({{indicatorXPos}},0.0)" x="132.0" y="20.0" fill="{{notes.fill.C}}" stroke="{{notes.stroke.C}}" stroke-width="1" font-size="25">C</text>
+                <text transform="translate({{indicatorXPos}},0.0)" x="152.0" y="20.0" fill="{{notes.fill.D}}" stroke="{{notes.stroke.D}}" stroke-width="1" font-size="25">D</text>
+                <text transform="translate({{indicatorXPos}},0.0)" x="172.0" y="20.0" fill="{{notes.fill.E}}" stroke="{{notes.stroke.E}}" stroke-width="1" font-size="25">E</text>
+                <text transform="translate({{indicatorXPos}},0.0)" x="192.0" y="20.0" fill="{{notes.fill.F}}" stroke="{{notes.stroke.F}}" stroke-width="1" font-size="25">F</text>
+                <text transform="translate({{indicatorXPos}},0.0)" x="212.0" y="20.0" fill="{{notes.fill.G}}" stroke="{{notes.stroke.G}}" stroke-width="1" font-size="25">G</text>
+                <text transform="translate({{indicatorXPos}},0.0)" x="232.0" y="20.0" fill="{{notes.fill.Sharp}}" stroke="{{notes.stroke.Sharp}}" stroke-width="1" font-size="25">&#9839;</text>
+                </svg>
+            </div>
+        </div>
+    </body>
+</html>
